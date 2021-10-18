@@ -1,0 +1,23 @@
+{
+  "name": "simplemdt-api",
+  "version": "1.0.0",
+  "description": "The REST API for the SimpleMDT web app",
+  "main": "src/app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "br4d",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.0.11"
+  }
+}
