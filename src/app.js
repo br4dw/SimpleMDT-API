@@ -41,6 +41,14 @@ app.get('/characters/get', async function(req, res) {
 	return res.send(JSON.stringify(character));
 })
 
+app.get('/characters/search', async function(req, res) {
+	let fname = req.query.fname;
+	let lname = req.query.lname;
+	let characters = await util.searchCharacter(fname, lname, db);
+	logger.request('/characters/search', `${fname} ${lname} (${characters.length} results)`);
+	return res.send(JSON.stringify(characters));
+})
+
 app.get('/characters/delete', async function(req, res) {
 	let uuid = req.query.uuid;
 	let userid = req.query.userid;
